@@ -1,10 +1,10 @@
-# 🚀 Digital Soul - Deployment Guide
+# 🚀 Conscious - Deployment Guide
 
 **Production-Ready Deployment for Pi.ai Quality Voice Companion**
 
 ## Deployment Overview
 
-Digital Soul can be deployed in multiple configurations:
+Conscious can be deployed in multiple configurations:
 1. **Local Desktop**: Single-user installation (most common)
 2. **Home Server**: Multi-user family deployment
 3. **Docker Container**: Isolated, reproducible deployment
@@ -24,8 +24,8 @@ Digital Soul can be deployed in multiple configurations:
 
 ```bash
 # Clone and install
-git clone https://github.com/yourusername/digital-soul.git
-cd digital-soul
+git clone https://github.com/Ghenghis/Conscious.git
+cd Conscious
 bash scripts/install.sh
 
 # This script will:
@@ -45,8 +45,8 @@ bash scripts/install.sh
 **File**: `config/production.yaml`
 
 ```yaml
-# Digital Soul Production Configuration
-# Copy to ~/.soul/config.yaml and customize
+# Conscious Production Configuration
+# Copy to ~/.conscious/config.yaml and customize
 
 # User Settings
 user_id: production_user
@@ -55,7 +55,7 @@ wake_word: soul  # or null for always-on
 
 # Voice Engine (Moshi)
 moshi:
-  model_path: ~/.soul/models/moshi-7b
+  model_path: ~/.conscious/models/moshi-7b
   device: cuda  # or cpu
   use_quantization: true  # Reduce VRAM (12GB → 3GB)
   latency_target_ms: 200
@@ -66,7 +66,7 @@ moshi:
 memory:
   vector_store: qdrant
   embedding_model: all-MiniLM-L6-v2
-  storage_path: ~/.soul/memory
+  storage_path: ~/.conscious/memory
   max_memories: 10000
   search_limit: 5
   enable_encryption: true
@@ -88,7 +88,7 @@ accent:
 adapters:
   - name: coding
     enabled: true
-    config: ~/.soul/adapters/coding.yaml
+    config: ~/.conscious/adapters/coding.yaml
   - name: writing
     enabled: false
   - name: research
@@ -111,7 +111,7 @@ privacy:
 # Logging
 logging:
   level: INFO  # DEBUG, INFO, WARNING, ERROR
-  path: ~/.soul/logs
+  path: ~/.conscious/logs
   max_size: 100MB
   retention_days: 30
 
@@ -130,7 +130,7 @@ resources:
 
 #### 2. Adapter Configurations
 
-**File**: `~/.soul/adapters/coding.yaml`
+**File**: `~/.conscious/adapters/coding.yaml`
 
 ```yaml
 # Coding Adapter Configuration (Super-Goose Integration)
@@ -141,7 +141,7 @@ integration:
   cli_path: super-goose
   working_directory: ~/projects
   event_server: ws://localhost:8080/events
-  log_path: ~/.goose/logs
+  log_path: ~/.conscious/logs
 
 capabilities:
   - run_tests
@@ -179,11 +179,11 @@ preferences:
 
 ### System Service (Linux)
 
-**File**: `/etc/systemd/system/digital-soul.service`
+**File**: `/etc/systemd/system/conscious.service`
 
 ```ini
 [Unit]
-Description=Digital Soul Voice Companion
+Description=Conscious Voice Companion
 After=network.target
 
 [Service]
@@ -216,16 +216,16 @@ WantedBy=multi-user.target
 **Setup**:
 ```bash
 # Install service
-sudo cp digital-soul.service /etc/systemd/system/
+sudo cp conscious.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable digital-soul
-sudo systemctl start digital-soul
+sudo systemctl enable conscious
+sudo systemctl start conscious
 
 # Check status
-sudo systemctl status digital-soul
+sudo systemctl status conscious
 
 # View logs
-sudo journalctl -u digital-soul -f
+sudo journalctl -u conscious -f
 ```
 
 ### Docker Deployment
@@ -233,7 +233,7 @@ sudo journalctl -u digital-soul -f
 **File**: `Dockerfile`
 
 ```dockerfile
-# Digital Soul Docker Image
+# Conscious Docker Image
 FROM nvidia/cuda:11.8.0-runtime-ubuntu22.04
 
 # Install dependencies
@@ -258,7 +258,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 RUN python3 scripts/download_moshi.py
 
 # Create volume mount points
-VOLUME ["/root/.soul/memory", "/root/.soul/logs", "/root/.soul/backups"]
+VOLUME ["/root/.conscious/memory", "/root/.conscious/logs", "/root/.conscious/backups"]
 
 # Expose ports (if remote access enabled)
 EXPOSE 8765
@@ -277,19 +277,19 @@ CMD ["python3", "-m", "digital_soul"]
 version: '3.8'
 
 services:
-  digital-soul:
+  conscious:
     build: .
-    image: digital-soul:latest
-    container_name: digital-soul
+    image: conscious:latest
+    container_name: conscious
     runtime: nvidia  # For GPU support
     environment:
       - CUDA_VISIBLE_DEVICES=0
-      - SOUL_CONFIG=/root/.soul/config.yaml
+      - CONSCIOUS_CONFIG=/root/.conscious/config.yaml
     volumes:
-      - ~/.soul/memory:/root/.soul/memory
-      - ~/.soul/logs:/root/.soul/logs
-      - ~/.soul/backups:/root/.soul/backups
-      - ~/.soul/config.yaml:/root/.soul/config.yaml:ro
+      - ~/.conscious/memory:/root/.conscious/memory
+      - ~/.conscious/logs:/root/.conscious/logs
+      - ~/.conscious/backups:/root/.conscious/backups
+      - ~/.conscious/config.yaml:/root/.conscious/config.yaml:ro
     devices:
       - /dev/snd:/dev/snd  # Audio devices
     restart: unless-stopped
@@ -311,7 +311,7 @@ services:
     ports:
       - "6333:6333"
     volumes:
-      - ~/.soul/memory/qdrant:/qdrant/storage
+      - ~/.conscious/memory/qdrant:/qdrant/storage
     restart: unless-stopped
 
   # Optional: Neo4j graph database
@@ -324,7 +324,7 @@ services:
       - "7474:7474"
       - "7687:7687"
     volumes:
-      - ~/.soul/memory/neo4j:/data
+      - ~/.conscious/memory/neo4j:/data
     restart: unless-stopped
 ```
 
@@ -334,7 +334,7 @@ services:
 docker-compose up -d
 
 # View logs
-docker-compose logs -f digital-soul
+docker-compose logs -f conscious
 
 # Stop
 docker-compose down
@@ -371,7 +371,7 @@ async def check_health():
 
     try:
         # Check configuration
-        config = SoulConfig.from_yaml("~/.soul/config.yaml")
+        config = SoulConfig.from_yaml("~/.conscious/config.yaml")
         checks["config_valid"] = True
 
         # Check models exist
@@ -500,7 +500,7 @@ def start_metrics_server(port=9090):
 ```json
 {
   "dashboard": {
-    "title": "Digital Soul Monitoring",
+    "title": "Conscious Monitoring",
     "panels": [
       {
         "title": "Response Latency (P95)",
@@ -583,7 +583,7 @@ def start_metrics_server(port=9090):
 
 ```bash
 #!/bin/bash
-# Automated backup script for Digital Soul
+# Automated backup script for Conscious
 
 SOUL_DIR="$HOME/.soul"
 BACKUP_DIR="$SOUL_DIR/backups"
@@ -616,20 +616,20 @@ echo "Size: $(du -h "$BACKUP_DIR/$BACKUP_FILE" | cut -f1)"
 0 2 * * * /home/yourusername/.soul/scripts/backup.sh
 
 # Weekly backup to external drive
-0 3 * * 0 cp ~/.soul/backups/soul_backup_*.tar.gz /mnt/external/
+0 3 * * 0 cp ~/.conscious/backups/soul_backup_*.tar.gz /mnt/external/
 ```
 
 ### Recovery
 
 ```bash
 # Restore from backup
-tar -xzf ~/.soul/backups/soul_backup_20260207_020000.tar.gz -C ~
+tar -xzf ~/.conscious/backups/soul_backup_20260207_020000.tar.gz -C ~
 
 # Verify
 python3 scripts/health_check.py
 
 # Restart
-systemctl restart digital-soul
+systemctl restart conscious
 ```
 
 ## Security Hardening
@@ -648,7 +648,7 @@ sudo ufw allow from 127.0.0.1  # Localhost only
 
 ### 2. AppArmor Profile (Linux)
 
-**File**: `/etc/apparmor.d/digital-soul`
+**File**: `/etc/apparmor.d/conscious`
 
 ```
 #include <tunables/global>
@@ -787,10 +787,10 @@ python3 scripts/migrate.py
 python3 scripts/health_check.py
 
 # 6. Restart
-systemctl restart digital-soul
+systemctl restart conscious
 
 # 7. Verify
-systemctl status digital-soul
+systemctl status conscious
 ```
 
 ---
@@ -810,4 +810,4 @@ Before deploying to production:
 - [ ] Documentation reviewed
 - [ ] User training completed
 
-**Digital Soul is ready for production deployment!** 🚀
+**Conscious is ready for production deployment!** 🚀

@@ -1,8 +1,8 @@
-# 🚀 Getting Started with Digital Soul
+# 🚀 Getting Started with Conscious
 
 **Build your own Pi.ai-quality voice companion in 16 weeks**
 
-This guide will get you from zero to your first conversation with Digital Soul.
+This guide will get you from zero to your first conversation with Conscious.
 
 ## Prerequisites
 
@@ -38,9 +38,9 @@ This guide will get you from zero to your first conversation with Digital Soul.
 ### Step 1: Clone Repository
 
 ```bash
-# Clone Digital Soul
-git clone https://github.com/yourusername/digital-soul.git
-cd digital-soul
+# Clone Conscious
+git clone https://github.com/Ghenghis/Conscious.git
+cd Conscious
 
 # Create virtual environment
 python -m venv venv
@@ -71,7 +71,7 @@ pip install torch torchvision torchaudio
 # Download Moshi 7B model (~7GB, one-time)
 python scripts/download_moshi.py
 
-# This will download to ~/.soul/models/moshi-7b/
+# This will download to ~/.conscious/models/moshi-7b/
 # Takes 10-30 minutes depending on internet speed
 ```
 
@@ -88,7 +88,7 @@ This will ask you:
 - GPU vs CPU mode
 - Privacy preferences
 
-Creates: `~/.soul/config.yaml`
+Creates: `~/.conscious/config.yaml`
 
 ### Step 5: Test Audio
 
@@ -103,16 +103,16 @@ This will:
 - Test audio quality
 - Recommend settings
 
-### Step 6: Launch Digital Soul!
+### Step 6: Launch Conscious!
 
 ```bash
-# Start Digital Soul
+# Start Conscious
 python -m digital_soul
 ```
 
 You should see:
 ```
-🌌 Digital Soul v0.1.0
+🌌 Conscious v0.1.0
 ✓ Moshi loaded (GPU mode)
 ✓ Memory system initialized
 ✓ Audio devices ready
@@ -134,13 +134,13 @@ Soul: "Nice to meet you, Alex. I'm here to help with whatever
       you're working on. What brings you here today?"
 ```
 
-**Congratulations! You just had your first conversation with Digital Soul! 🎉**
+**Congratulations! You just had your first conversation with Conscious! 🎉**
 
 ---
 
 ## Configuration
 
-### Basic Config (~/.soul/config.yaml)
+### Basic Config (~/.conscious/config.yaml)
 
 ```yaml
 # User settings
@@ -155,7 +155,7 @@ moshi:
 
 # Memory settings
 memory:
-  storage: ~/.soul/memory
+  storage: ~/.conscious/memory
   encryption: true
   max_memories: 10000
 
@@ -255,7 +255,7 @@ voice:
 
 ### 1. Setup Your First Adapter
 
-Let's connect Digital Soul to a project:
+Let's connect Conscious to a project:
 
 **For Coding (Super-Goose)**:
 ```bash
@@ -404,7 +404,7 @@ log_level: DEBUG
 
 Then check logs:
 ```bash
-tail -f ~/.soul/logs/soul.log
+tail -f ~/.conscious/logs/soul.log
 ```
 
 ### Reset Everything
@@ -414,11 +414,11 @@ tail -f ~/.soul/logs/soul.log
 cp -r ~/.soul ~/.soul.backup
 
 # Reset configuration
-rm ~/.soul/config.yaml
+rm ~/.conscious/config.yaml
 python scripts/configure.py
 
 # Reset memories (careful!)
-rm -rf ~/.soul/memory/*
+rm -rf ~/.conscious/memory/*
 ```
 
 ---
@@ -456,4 +456,4 @@ You're ready to:
 
 ---
 
-**Welcome to Digital Soul. Your companion for the digital age.** 🌌
+**Welcome to Conscious. Your companion for the digital age.** 🌌

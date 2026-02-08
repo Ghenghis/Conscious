@@ -1,4 +1,4 @@
-# 🎯 Goose - Personality Skills System
+# 🎯 Conscious - Personality Skills System
 
 **Give Your Companion Unique Abilities, Expertise & Special Talents**
 
@@ -958,7 +958,7 @@ class SkillUnlocks:
 
 ## 7. Configuration Storage
 
-**File**: `~/.goose/personalities/buddy_with_skills.json`
+**File**: `~/.conscious/personalities/buddy_with_skills.json`
 
 ```json
 {

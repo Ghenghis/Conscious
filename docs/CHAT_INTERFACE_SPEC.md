@@ -1,4 +1,4 @@
-# 💬 Goose - Chat Interface & History System
+# 💬 Conscious - Chat Interface & History System
 
 **Customizable UI + Persistent Cross-Project Memory**
 
@@ -253,7 +253,7 @@ class LayoutSettings:
 
 ### 1.4 User Preferences Storage
 
-**File**: `~/.goose/ui_preferences.json`
+**File**: `~/.conscious/ui_preferences.json`
 
 ```json
 {
@@ -303,7 +303,7 @@ class LayoutSettings:
 
 ### 2.1 Conversation Storage Architecture
 
-**Database Schema** (SQLite: `~/.goose/history/conversations.db`):
+**Database Schema** (SQLite: `~/.conscious/history/conversations.db`):
 
 ```sql
 -- Conversations table
@@ -369,7 +369,7 @@ CREATE INDEX idx_project_context_project ON project_context(project_id);
 class ConversationHistory:
     """Manages persistent chat history with cross-project memory"""
 
-    def __init__(self, db_path: str = "~/.goose/history/conversations.db"):
+    def __init__(self, db_path: str = "~/.conscious/history/conversations.db"):
         self.db_path = Path(db_path).expanduser()
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
         self.conn = sqlite3.connect(self.db_path)
@@ -937,7 +937,7 @@ class PrivacyManager:
 
 ### 7.2 Privacy Settings
 
-**File**: `~/.goose/history/privacy_settings.json`
+**File**: `~/.conscious/history/privacy_settings.json`
 
 ```json
 {
@@ -983,11 +983,11 @@ class PrivacyManager:
 3. Changes chat font to "JetBrains Mono" at 15px
 4. Sets message spacing to "spacious"
 5. Sees live preview of changes
-6. Clicks "Save" → preferences stored in `~/.goose/ui_preferences.json`
+6. Clicks "Save" → preferences stored in `~/.conscious/ui_preferences.json`
 
 ### Flow 2: Search Past Conversations
 1. User asks: "What did we discuss about authentication last week?"
-2. Goose searches chat history with query "authentication"
+2. Conscious searches chat history with query "authentication"
 3. Finds 3 relevant messages from 5 days ago in different project
 4. Displays snippets with context: "You asked about JWT tokens and I explained..."
 5. User clicks message → full conversation opens
@@ -996,11 +996,11 @@ class PrivacyManager:
 ### Flow 3: Cross-Project Recall
 1. User starts new project "mobile-app"
 2. Asks: "How should I structure the API?"
-3. Goose searches project context and finds:
+3. Conscious searches project context and finds:
    - Previous discussion in "web-app" project about REST API design
    - Decision to use /api/v1 pattern
    - Preference for JSON over XML
-4. Goose: "Based on our discussion in the web-app project 2 months ago, you preferred REST with /api/v1 pattern. Should we follow the same approach?"
+4. Conscious: "Based on our discussion in the web-app project 2 months ago, you preferred REST with /api/v1 pattern. Should we follow the same approach?"
 5. User: "Yes, use that pattern"
 6. Context stored for mobile-app project
 

@@ -1,8 +1,8 @@
-# 🎯 Digital Soul - Complete Implementation Blueprint
+# 🎯 Conscious - Complete Implementation Blueprint
 
 **Building Pi.ai Quality Voice Companion with Proven 2026 Technology**
 
-Based on deep research into state-of-the-art voice AI systems, this blueprint provides everything needed for Windsurf IDE + Claude Opus 4.6 to implement Digital Soul.
+Based on deep research into state-of-the-art voice AI systems, this blueprint provides everything needed for Windsurf IDE + Claude Opus 4.6 to implement Conscious.
 
 ## 🔬 Research Foundation
 
@@ -43,14 +43,14 @@ From [Mem0 official docs](https://mem0.ai/) and [AWS implementation guide](https
 
 ### Can We Match Pi.ai Quality? **YES**
 
-| Capability | Pi.ai | Digital Soul | Status |
-|-----------|-------|--------------|---------|
-| Voice Quality | Excellent (human-like) | Moshi (92 intonations) | ✅ Achievable |
-| Latency | ~150-200ms | Moshi (200ms practical) | ✅ Matched |
-| Emotion | Deep RL, empathetic | Moshi + custom emotion layer | ✅ Achievable |
-| Memory | Context-aware | Mem0 (+26% accuracy) | ✅ Better |
-| Privacy | Cloud-only | 100% local | ✅ Superior |
-| Cost | Free (ad-supported) | Free (self-hosted) | ✅ Matched |
+| Capability    | Pi.ai                  | Conscious                    | Status       |
+| ------------- | ---------------------- | ---------------------------- | ------------ |
+| Voice Quality | Excellent (human-like) | Moshi (92 intonations)       | ✅ Achievable |
+| Latency       | ~150-200ms             | Moshi (200ms practical)      | ✅ Matched    |
+| Emotion       | Deep RL, empathetic    | Moshi + custom emotion layer | ✅ Achievable |
+| Memory        | Context-aware          | Mem0 (+26% accuracy)         | ✅ Better     |
+| Privacy       | Cloud-only             | 100% local                   | ✅ Superior   |
+| Cost          | Free (ad-supported)    | Free (self-hosted)           | ✅ Matched    |
 
 **Verdict**: Not only achievable, but potentially superior due to local privacy and customizability.
 
@@ -573,7 +573,7 @@ class SoulMemory:
     def __init__(
         self,
         user_id: str,
-        storage_path: str = "~/.soul/memory",
+        storage_path: str = "~/.conscious/memory",
         embedding_model: str = "all-MiniLM-L6-v2"
     ):
         self.user_id = user_id

@@ -1,4 +1,4 @@
-# 🎭 Goose - Personality Studio
+# 🎭 Conscious - Personality Studio
 
 **Advanced Personality Customization & NSFW/18+/21+ Features**
 
@@ -16,7 +16,7 @@ The **Personality Studio** gives users complete control over their companion's p
 class AgeVerification:
     """Age verification for NSFW/18+ content"""
 
-    def __init__(self, config_path: str = "~/.goose/age_verification.json"):
+    def __init__(self, config_path: str = "~/.conscious/age_verification.json"):
         self.config_path = Path(config_path).expanduser()
         self.verified = self._check_verification()
 
@@ -923,7 +923,7 @@ if not result.allowed:
 
 ### 6.1 File Format
 
-**File**: `~/.goose/personalities/custom_companion.json`
+**File**: `~/.conscious/personalities/custom_companion.json`
 
 ```json
 {
@@ -941,7 +941,7 @@ if not result.allowed:
     "explicitness": 20
   },
   "accent": "US",
-  "voice_clone_path": "~/.goose/voices/my_custom_voice.wav",
+  "voice_clone_path": "~/.conscious/voices/my_custom_voice.wav",
   "custom_phrases": [
     "Hey you!",
     "Miss me?",

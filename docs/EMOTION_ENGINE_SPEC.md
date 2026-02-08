@@ -62,11 +62,11 @@ Audio Input (24kHz)
     (frustrated, 0.87)
 ```
 
-## 📋 Complete Implementation
+## Complete Implementation
 
 ### File 1: Emotion Detector
 
-**File**: `digital_soul/emotion/detector.py`
+**File**: `conscious/emotion/detector.py`
 
 ```python
 """
@@ -398,11 +398,11 @@ class EmotionTracker:
         most_common = counts.most_common(1)[0]
 
         return (most_common[0], most_common[1] / len(emotions))
-```
+
 
 ### File 2: Accent & Dialect Support
 
-**File**: `digital_soul/voice/accent_engine.py`
+**File**: `conscious/voice/accent_engine.py`
 
 ```python
 """

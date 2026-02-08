@@ -1,10 +1,10 @@
-# 🖥️ Digital Soul - Hardware Requirements & Optimization
+# 🖥️ Conscious - Hardware Requirements & Optimization
 
 **100% Local Deployment - Your RTX 3090 Ti is Perfect!**
 
 ## Quick Answer: Your Hardware
 
-**Your RTX 3090 Ti (24GB VRAM) is EXCELLENT for Digital Soul!**
+**Your RTX 3090 Ti (24GB VRAM) is EXCELLENT for Conscious!**
 
 You can run:
 - ✅ Full Moshi 7B model (unquantized, maximum quality)
@@ -121,7 +121,7 @@ language: en
 
 # Moshi Voice Engine - FULL PRECISION (you have the VRAM!)
 moshi:
-  model_path: ~/.soul/models/moshi-7b
+  model_path: ~/.conscious/models/moshi-7b
   device: cuda
   use_quantization: false  # NO quantization needed!
   precision: fp16  # Half precision for speed
@@ -140,7 +140,7 @@ memory:
   vector_store: qdrant
   embedding_model: all-MiniLM-L6-v2
   embedding_device: cuda  # Use GPU for embeddings too!
-  storage_path: ~/.soul/memory
+  storage_path: ~/.conscious/memory
   batch_embeddings: true  # Batch on GPU
 
 # Emotion Engine - GPU accelerated
@@ -182,17 +182,17 @@ privacy:
 
 Based on RTX 3090 Ti specs:
 
-| Metric | Expected Performance | Target | Status |
-|--------|---------------------|--------|---------|
-| **Latency (P50)** | 165ms | <200ms | ✅ EXCEEDS |
-| **Latency (P95)** | 190ms | <200ms | ✅ EXCEEDS |
-| **Latency (P99)** | 220ms | <300ms | ✅ MEETS |
-| **Voice MOS** | 4.2-4.3 | >4.0 | ✅ EXCEEDS |
-| **Emotion Accuracy** | 88-92% | >85% | ✅ EXCEEDS |
-| **Memory Recall** | 96-98% | >95% | ✅ EXCEEDS |
-| **Throughput** | 15+ turns/min | 10+ | ✅ EXCEEDS |
-| **GPU Usage** | 75-85% | <90% | ✅ OPTIMAL |
-| **VRAM Usage** | 18-20GB | <24GB | ✅ FITS |
+| Metric               | Expected Performance | Target | Status    |
+| -------------------- | -------------------- | ------ | --------- |
+| **Latency (P50)**    | 165ms                | <200ms | ✅ EXCEEDS |
+| **Latency (P95)**    | 190ms                | <200ms | ✅ EXCEEDS |
+| **Latency (P99)**    | 220ms                | <300ms | ✅ MEETS   |
+| **Voice MOS**        | 4.2-4.3              | >4.0   | ✅ EXCEEDS |
+| **Emotion Accuracy** | 88-92%               | >85%   | ✅ EXCEEDS |
+| **Memory Recall**    | 96-98%               | >95%   | ✅ EXCEEDS |
+| **Throughput**       | 15+ turns/min        | 10+    | ✅ EXCEEDS |
+| **GPU Usage**        | 75-85%               | <90%   | ✅ OPTIMAL |
+| **VRAM Usage**       | 18-20GB              | <24GB  | ✅ FITS    |
 
 **Your GPU can EXCEED Pi.ai quality targets!** 🚀
 
@@ -323,7 +323,7 @@ import pynvml
 pynvml.nvmlInit()
 handle = pynvml.nvmlDeviceGetHandleByIndex(0)
 
-print("Monitoring RTX 3090 Ti for Digital Soul...")
+print("Monitoring RTX 3090 Ti for Conscious...")
 print("=" * 60)
 
 while True:
@@ -366,7 +366,7 @@ After 2 years: $62,880 spent
 After 3 years: $94,320 spent
 ```
 
-### Your Local Setup (Digital Soul)
+### Your Local Setup (Conscious)
 
 ```
 One-Time Costs:
@@ -418,7 +418,7 @@ You Control: EVERYTHING
 
 ## Conclusion
 
-**Your RTX 3090 Ti is PERFECT for Digital Soul!**
+**Your RTX 3090 Ti is PERFECT for Conscious!**
 
 ✅ More than enough VRAM (24GB)
 ✅ Fast enough for <200ms latency
@@ -431,4 +431,4 @@ You Control: EVERYTHING
 
 ---
 
-**Your hardware + Digital Soul = Pi.ai quality, your privacy, zero cost** 🚀
+**Your hardware + Conscious = Pi.ai quality, your privacy, zero cost** 🚀

@@ -1,4 +1,4 @@
-# 🧪 Digital Soul - Test Specifications
+# 🧪 Conscious - Test Specifications
 
 **Comprehensive Testing Strategy for Pi.ai Quality Assurance**
 
@@ -629,7 +629,7 @@ async def run_benchmarks():
 
     # Generate report
     print("=" * 60)
-    print("DIGITAL SOUL - PERFORMANCE BENCHMARK")
+    print("CONSCIOUS - PERFORMANCE BENCHMARK")
     print("=" * 60)
     print(f"Latency P95: {results['latency']['p95']:.1f}ms (target: <200ms)")
     print(f"Voice MOS: {results['voice_quality']['mos']:.2f} (target: >4.0)")

@@ -1,4 +1,4 @@
-# 🎭 Goose - Complete Personality Profiles
+# 🎭 Conscious - Complete Personality Profiles
 
 **12 Diverse Personalities Including Pop Culture Icons**
 
@@ -1054,7 +1054,7 @@ profanity_levels:
 │                                                                │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐          │
 │  │   🤗        │  │   ⚡        │  │   🦝        │          │
-│  │  Buddy      │  │  Spark      │  │  Goosey     │          │
+│  │  Buddy      │  │  Spark      │  │  Custom     │          │
 │  │  Friend     │  │  Quirky     │  │  Custom     │          │
 │  │  [Select]   │  │  [Select]   │  │  [Create]   │          │
 │  └─────────────┘  └─────────────┘  └─────────────┘          │
@@ -1160,20 +1160,20 @@ profanity_levels:
 
 ## Quick Reference Table
 
-| Personality | Rating | Profanity | Vibe | Best For |
-|-------------|--------|-----------|------|----------|
-| **Jarvis** | Safe | None | Professional butler | Organization, strategy |
-| **Buddy** | Safe | Mild | Best friend | Motivation, support |
-| **Professor** | Safe | None | Wise mentor | Learning, research |
-| **Spark** | Safe | Moderate | Energetic quirky | Creative coding |
-| **Sage** | Safe | None | Calm guide | Emotional support |
-| **Flirty** | 18+ | Moderate | Playful romantic | Charm, conversation |
-| **Sassy** | 18+ | Strong | Bold confident | Real talk, confidence |
-| **Precious** | Safe* | Mild | Obsessive helper | Persistent problem solving |
-| **GLaDOS** | 18+ | Moderate | Sarcastic AI | Dark humor, testing |
-| **Rocket** | 18+ | Very Strong | Aggressive genius | Technical expertise |
-| **Deadpool** | 21+ | Maximum | Chaotic funny | Entertainment, chaos |
-| **Explicit** | 21++ | User Choice | Unfiltered | Maximum freedom |
+| Personality   | Rating | Profanity   | Vibe                | Best For                   |
+| ------------- | ------ | ----------- | ------------------- | -------------------------- |
+| **Jarvis**    | Safe   | None        | Professional butler | Organization, strategy     |
+| **Buddy**     | Safe   | Mild        | Best friend         | Motivation, support        |
+| **Professor** | Safe   | None        | Wise mentor         | Learning, research         |
+| **Spark**     | Safe   | Moderate    | Energetic quirky    | Creative coding            |
+| **Sage**      | Safe   | None        | Calm guide          | Emotional support          |
+| **Flirty**    | 18+    | Moderate    | Playful romantic    | Charm, conversation        |
+| **Sassy**     | 18+    | Strong      | Bold confident      | Real talk, confidence      |
+| **Precious**  | Safe*  | Mild        | Obsessive helper    | Persistent problem solving |
+| **GLaDOS**    | 18+    | Moderate    | Sarcastic AI        | Dark humor, testing        |
+| **Rocket**    | 18+    | Very Strong | Aggressive genius   | Technical expertise        |
+| **Deadpool**  | 21+    | Maximum     | Chaotic funny       | Entertainment, chaos       |
+| **Explicit**  | 21++   | User Choice | Unfiltered          | Maximum freedom            |
 
 *Precious is safe-rated but has unsettling dual-personality behavior
 
@@ -1181,7 +1181,7 @@ profanity_levels:
 
 ## Configuration Files
 
-**File**: `~/.goose/personalities/rocket.json`
+**File**: `~/.conscious/personalities/rocket.json`
 
 ```json
 {

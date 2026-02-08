@@ -1,4 +1,4 @@
-# 📊 Digital Soul - System Diagrams
+# 📊 Conscious - System Diagrams
 
 **Complete Visual Architecture for Implementation**
 
@@ -17,7 +17,7 @@
                    │                           │
                    ▼                           ▼
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                         DIGITAL SOUL CORE                               │
+│                         CONSCIOUS CORE                               │
 │  ┌───────────────────────────────────────────────────────────────────┐ │
 │  │                    AUDIO I/O LAYER                                │ │
 │  │  ┌─────────────────┐              ┌──────────────────┐          │ │
@@ -383,7 +383,7 @@ Performance Metrics (Proven):
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     DIGITAL SOUL CORE                           │
+│                     CONSCIOUS CORE                           │
 │                (Intent + Context from conversation)             │
 └────────────────────────┬────────────────────────────────────────┘
                          │
@@ -453,7 +453,7 @@ Performance Metrics (Proven):
 │  ┌─────────────────────────────────────────────────────────────────┐│
 │  │ Integration Points                                              ││
 │  │ - CLI: super-goose [command]                                    ││
-│  │ - Logs: ~/.goose/logs/                                          ││
+│  │ - Logs: ~/.conscious/logs/                                          ││
 │  │ - Events: ws://localhost:8080/events                            ││
 │  │ - Plans: ./PLAN.md                                              ││
 │  └─────────────────────────────────────────────────────────────────┘│

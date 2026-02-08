@@ -1,4 +1,4 @@
-# 🔬 Digital Soul - Deep Research Analysis
+# 🔬 Conscious - Deep Research Analysis
 
 **Comprehensive Technical Deep-Dive into 2026 State-of-the-Art Voice AI**
 
@@ -32,7 +32,7 @@ Audio → STT → Text tokens → LLM → Text → TTS → Audio
        100ms   500ms       300ms     200ms
        TOTAL: ~1100ms latency
 
-Moshi Pipeline (Digital Soul):
+Moshi Pipeline (Conscious):
 Audio → Mimi Codec → [Text + Semantic + Acoustic] tokens → Audio
        80ms         120ms
        TOTAL: 200ms latency (5.5x faster!)
@@ -257,12 +257,12 @@ From [Mimi announcement](https://x.com/kyutai_labs/status/1836427403905610156):
 
 **Quality Metrics** (from research):
 
-| Codec | Bitrate | Quality (MOS) | Semantic Preservation | Latency |
-|-------|---------|---------------|---------------------|---------|
-| Opus (traditional) | 6.0 kbps | 3.2 | Poor | 20ms |
-| SoundStream | 3.0 kbps | 3.8 | None | 100ms |
-| EnCodec | 1.5 kbps | 4.0 | None | 80ms |
-| **Mimi** | **1.1 kbps** | **4.2** | **Excellent** | **80ms** |
+| Codec              | Bitrate      | Quality (MOS) | Semantic Preservation | Latency  |
+| ------------------ | ------------ | ------------- | --------------------- | -------- |
+| Opus (traditional) | 6.0 kbps     | 3.2           | Poor                  | 20ms     |
+| SoundStream        | 3.0 kbps     | 3.8           | None                  | 100ms    |
+| EnCodec            | 1.5 kbps     | 4.0           | None                  | 80ms     |
+| **Mimi**           | **1.1 kbps** | **4.2**       | **Excellent**         | **80ms** |
 
 **Why Mimi Wins**:
 
@@ -385,7 +385,7 @@ class MimiCodec:
         return 174.5
 ```
 
-**Why This Matters for Digital Soul**:
+**Why This Matters for Conscious**:
 
 - **Lower Latency**: Less data to process = faster responses
 - **Better Quality**: Semantic info = more natural speech
@@ -422,7 +422,7 @@ Phoneme Level (Local)
 └── "FRUStrated" ← Pitch peaks on "FRU"
 ```
 
-**Implementation in Digital Soul**:
+**Implementation in Conscious**:
 
 ```python
 class HierarchicalEmotionController:
@@ -517,9 +517,9 @@ From [Exploring Prosodic Features for Secondary Emotions](https://www.mdpi.com/1
 
 **Primary vs. Secondary Emotions**:
 
-| Type | Examples | Prosody Pattern | Modeling Difficulty |
-|------|----------|-----------------|-------------------|
-| Primary | Happy, Sad, Angry | Clear, distinct | Easy (>90% accuracy) |
+| Type      | Examples                              | Prosody Pattern   | Modeling Difficulty  |
+| --------- | ------------------------------------- | ----------------- | -------------------- |
+| Primary   | Happy, Sad, Angry                     | Clear, distinct   | Easy (>90% accuracy) |
 | Secondary | Melancholic, Nostalgic, Contemplative | Subtle variations | Hard (~70% accuracy) |
 
 **Implementation Strategy**:
@@ -629,4 +629,4 @@ This deep-dive is based on cutting-edge 2026 research:
 - [Secondary Emotions Prosody (MDPI Sensors)](https://www.mdpi.com/1424-8220/23/6/2999)
 - [Emotion Controllable Speech Synthesis (EmergentMind)](https://www.emergentmind.com/topics/emotion-controllable-speech-synthesis)
 
-**Digital Soul leverages the absolute latest research to match Pi.ai quality!** 🔬
+**Conscious leverages the absolute latest research to match Pi.ai quality!** 🔬

@@ -480,7 +480,7 @@ class JarvispoolResponder:
 
 ## Example Configuration File
 
-**File**: `~/.goose/personalities/jarvispool.json`
+**File**: `~/.conscious/personalities/jarvispool.json`
 
 ```json
 {

@@ -1,4 +1,4 @@
-# 🗺️ Digital Soul - Implementation Roadmap
+# 🗺️ Conscious - Implementation Roadmap
 
 **Mission: Build Pi.ai quality voice companion, locally, in 16 weeks**
 
@@ -187,7 +187,7 @@ Q1 2026 (Weeks 1-16): Foundation → Production
 - [ ] Demo video
 - [ ] GitHub release
 - [ ] Community launch
-- **Deliverable**: Digital Soul v1.0 public
+- **Deliverable**: Conscious v1.0 public
 
 **Phase 5 Success Criteria**:
 - ✓ MOS >4.0 (Pi.ai level)
@@ -342,4 +342,4 @@ Q1 2026 (Weeks 1-16): Foundation → Production
 
 ---
 
-**Digital Soul: The Pi.ai quality companion you own, in 16 weeks.**
+**Conscious: The Pi.ai quality companion you own, in 16 weeks.**

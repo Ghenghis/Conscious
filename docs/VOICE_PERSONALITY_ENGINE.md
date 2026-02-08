@@ -1,6 +1,6 @@
 # 🎭 Voice Personality Engine - "Imperfection is Perfection"
 
-**Making Digital Soul More Human Through Strategic Imperfections**
+**Making Conscious More Human Through Strategic Imperfections**
 
 ## Philosophy: Why Imperfections Matter
 
@@ -46,7 +46,7 @@ From [ElevenLabs Voice Library](https://elevenlabs.io/voice-library/character):
 - Personality traits (confident, shy, enthusiastic, calm)
 - Emotional range
 
-## Digital Soul Personality Options
+## Conscious Personality Options
 
 ### Preset Personalities (J.A.R.V.I.S.-Style)
 

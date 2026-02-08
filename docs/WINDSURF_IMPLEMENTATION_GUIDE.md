@@ -1,6 +1,6 @@
 # 🌊 Windsurf IDE Implementation Guide
 
-**Complete Guide for Implementing Digital Soul with Claude Opus 4.6**
+**Complete Guide for Implementing Conscious with Claude Opus 4.6**
 
 ## Quick Start for Windsurf
 
@@ -114,7 +114,7 @@
 Create this structure:
 
 ```
-digital-soul/
+conscious/
 ├── digital_soul/                   # Main package
 │   ├── __init__.py
 │   ├── server.py                   # Main server
@@ -232,7 +232,7 @@ from digital_soul.memory.mem0_client import SoulMemory
 
 memory = SoulMemory(
     user_id="user",
-    storage_path="~/.soul/memory"
+    storage_path="~/.conscious/memory"
 )
 
 # Store conversation
@@ -520,7 +520,7 @@ Before marking each phase complete:
 
 **Everything is documented. Everything is researched. Everything is proven achievable.**
 
-Your RTX 3090 Ti + Digital Soul = **Pi.ai quality, your privacy, zero cost** 🚀
+Your RTX 3090 Ti + Conscious = **Pi.ai quality, your privacy, zero cost** 🚀
 
 **Now go build it with Windsurf + Claude Opus 4.6!**
 

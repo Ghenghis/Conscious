@@ -1,4 +1,4 @@
-# 🏗️ Digital Soul - Technical Architecture
+# 🏗️ Conscious - Technical Architecture
 
 ## Mission: Match Pi.ai Quality, Locally
 
@@ -17,15 +17,15 @@ After using Pi.ai for over a year, these are the key qualities we need to match:
 
 ## Why Existing Solutions Fall Short
 
-| Solution | Voice Quality | Privacy | Memory | Emotion | Why It's Not Enough |
-|----------|---------------|---------|--------|---------|---------------------|
-| ChatGPT Voice | Good | ✗ Cloud | ✗ | ✗ | No privacy, no persistent memory |
-| GPT-4o Voice | Excellent | ✗ Cloud | Limited | Some | Cloud-only, expensive |
-| Pi.ai | **Excellent** | ✗ Cloud | ✓ | ✓ | **Our target**, but cloud-only |
-| Open source TTS | Poor | ✓ Local | ✗ | ✗ | Robotic voice, no intelligence |
-| Coqui TTS | Okay | ✓ Local | ✗ | ✗ | Better voice, but still "TTS-y" |
+| Solution        | Voice Quality | Privacy | Memory  | Emotion | Why It's Not Enough              |
+| --------------- | ------------- | ------- | ------- | ------- | -------------------------------- |
+| ChatGPT Voice   | Good          | ✗ Cloud | ✗       | ✗       | No privacy, no persistent memory |
+| GPT-4o Voice    | Excellent     | ✗ Cloud | Limited | Some    | Cloud-only, expensive            |
+| Pi.ai           | **Excellent** | ✗ Cloud | ✓       | ✓       | **Our target**, but cloud-only   |
+| Open source TTS | Poor          | ✓ Local | ✗       | ✗       | Robotic voice, no intelligence   |
+| Coqui TTS       | Okay          | ✓ Local | ✗       | ✗       | Better voice, but still "TTS-y"  |
 
-**Digital Soul aims to match Pi.ai quality while being 100% local.**
+**Conscious aims to match Pi.ai quality while being 100% local.**
 
 ## Core Architecture
 
@@ -140,7 +140,7 @@ from qdrant_client import QdrantClient
 class MemorySystem:
     def __init__(self, user_id: str):
         # Local vector database
-        self.qdrant = QdrantClient(path="~/.soul/memory/qdrant")
+        self.qdrant = QdrantClient(path="~/.conscious/memory/qdrant")
 
         # Mem0 for memory management
         self.mem0 = Mem0Client(
@@ -197,7 +197,7 @@ class MemorySystem:
 ```
 
 **Privacy Features:**
-- **Local Storage**: All data in `~/.soul/memory/`
+- **Local Storage**: All data in `~/.conscious/memory/`
 - **Encryption**: AES-256 for sensitive memories
 - **User Control**: Easy memory inspection/deletion via UI
 - **No Sync**: Never leaves your machine
@@ -306,7 +306,7 @@ class EmotionModulator:
 
 ### 4. Universal Adapter System
 
-**Goal**: Make Digital Soul useful for ANY project, not just coding.
+**Goal**: Make Conscious useful for ANY project, not just coding.
 
 #### Adapter Interface
 
@@ -530,7 +530,7 @@ TOTAL LATENCY: ~200ms (target met!)
 ## Deployment Architecture
 
 ```
-~/.soul/
+~/.conscious/
 ├── config.yaml              # Main configuration
 ├── models/
 │   ├── moshi-7b/           # Voice model (7GB)
@@ -575,7 +575,7 @@ TOTAL LATENCY: ~200ms (target met!)
 from cryptography.fernet import Fernet
 
 class SecureMemory:
-    def __init__(self, key_path="~/.soul/memory.key"):
+    def __init__(self, key_path="~/.conscious/memory.key"):
         # Generate or load encryption key
         if not os.path.exists(key_path):
             key = Fernet.generate_key()
@@ -645,14 +645,14 @@ def test_memory_recall():
 
 ## Success Metrics
 
-| Metric | Target | How We Measure |
-|--------|--------|----------------|
-| Voice Quality (MOS) | >4.0 | Automated + user surveys |
-| Response Latency | <200ms | Performance logs |
-| Memory Accuracy | >95% | Test recall precision |
-| Emotion Detection | >85% | Labeled test set |
-| User Satisfaction | >4.5/5 | Weekly surveys |
-| Privacy Score | 100% | Network traffic = 0 |
+| Metric              | Target | How We Measure           |
+| ------------------- | ------ | ------------------------ |
+| Voice Quality (MOS) | >4.0   | Automated + user surveys |
+| Response Latency    | <200ms | Performance logs         |
+| Memory Accuracy     | >95%   | Test recall precision    |
+| Emotion Detection   | >85%   | Labeled test set         |
+| User Satisfaction   | >4.5/5 | Weekly surveys           |
+| Privacy Score       | 100%   | Network traffic = 0      |
 
 ## Next Steps
 
@@ -688,4 +688,4 @@ def test_memory_recall():
 
 ---
 
-**Digital Soul: Pi.ai quality, your privacy, universal capability.**
+**Conscious: Pi.ai quality, your privacy, universal capability.**

@@ -1,3 +1,32 @@
+Metadata-Version: 2.4
+Name: conscious
+Version: 1.0.0
+Summary: Conscious - Your Local AI Voice Companion
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: moshi>=0.2.12
+Requires-Dist: torch>=2.1.0
+Requires-Dist: torchaudio>=2.1.0
+Requires-Dist: huggingface-hub>=0.20.0
+Requires-Dist: sounddevice>=0.4.6
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: colorama>=0.4.6
+Provides-Extra: memory
+Requires-Dist: mem0ai>=0.1.0; extra == "memory"
+Requires-Dist: qdrant-client>=1.7.0; extra == "memory"
+Requires-Dist: sentence-transformers>=2.2.0; extra == "memory"
+Provides-Extra: emotion
+Requires-Dist: transformers>=4.36.0; extra == "emotion"
+Requires-Dist: librosa>=0.10.0; extra == "emotion"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Provides-Extra: all
+Requires-Dist: conscious[dev,emotion,memory]; extra == "all"
+
 # 🌌 Conscious - Your Personal AI Companion
 
 **"I think, therefore I am. And I am here for you."**
@@ -137,16 +166,12 @@ Conscious: "*2 second pause*
 
 ## 🏗️ Architecture
 
-### Voice Engine (Kyutai Moshi) — WORKING
+### Voice Engine (Kyutai Moshi)
 - Native speech-to-speech (not TTS!)
 - 200ms latency (160ms achievable)
 - Full duplex (listen while speaking)
 - Natural interruptions
 - Emotion modulation
-- **Agentic WebSocket client** — no browser required
-- **Auto-reconnect** — resets KV cache when latency degrades
-- **Server lifecycle management** — auto-start, health monitoring, crash recovery
-- **REST + WebSocket API** on port 8999 for Super-Goose integration
 
 ### Memory System (Mem0)
 - Triple storage (Vector + Graph + Key-Value)
@@ -258,10 +283,7 @@ profanity_levels:
 - [x] Research-backed philosophy (2026 AI consciousness)
 
 ### 🔄 Phase 2: Implementation (Current)
-- [x] Implement Moshi voice engine (server running, real-time audio working)
-- [x] Build agentic WebSocket client (auto-reconnect, latency monitoring)
-- [x] Build server lifecycle manager (auto-start, health checks, crash recovery)
-- [x] Build REST/WebSocket API for Super-Goose integration (port 8999)
+- [ ] Implement Moshi voice engine
 - [ ] Build emotion detection pipeline
 - [ ] Create personality variation engine
 - [ ] Implement memory system (Mem0)
@@ -276,7 +298,6 @@ profanity_levels:
 - [ ] Advanced features (time-based shifts, mood adaptation)
 
 ### 📋 Phase 4: Ecosystem
-- [x] Super-Goose voice integration (Moshi Agent API on port 8999)
 - [ ] Super-Goose coding adapter
 - [ ] Writing assistant adapter
 - [ ] Research helper adapter
@@ -308,7 +329,7 @@ profanity_levels:
 
 All documentation is in `/docs`:
 
-1. **PERSONALITY_CONSCIOUS_ULTIMATE.md** - Full research-backed Conscious spec
+1. **PERSONALITY_CONSCIOUS_ULTIMATE.md** - ⭐ NEW! Full research-backed Conscious spec
 2. **VOICE_CONSCIOUS.md** - Conscious voice profile & modulation
 3. **PERSONALITY_JARVISPOOL.md** - Alternate personality details
 4. **PERSONALITY_PROFILES_COMPLETE.md** - All 12+ personalities
@@ -327,9 +348,6 @@ All documentation is in `/docs`:
 17. **HARDWARE_REQUIREMENTS.md** - RTX 3090 Ti optimization
 18. **RESEARCH_DEEP_DIVE.md** - 2026 SOTA research
 19. **WINDSURF_IMPLEMENTATION_GUIDE.md** - Windsurf/Claude build guide
-20. **MOSHI_AGENTIC_SYSTEM.md** - ⭐ Agentic voice architecture, protocol, components
-21. **SUPER_GOOSE_INTEGRATION.md** - ⭐ Super-Goose integration guide + API reference
-22. **MOSHI_SETUP_GUIDE.md** - ⭐ Windows setup, troubleshooting, known issues
 
 ---
 
